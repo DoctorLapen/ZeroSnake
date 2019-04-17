@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - snakeHead
+  - Food
   layers:
   - Default
   - TransparentFX
@@ -18,9 +20,9 @@ TagManager:
   - 
   - 
   - 
+  - food
   - 
-  - 
-  - 
+  - Snake
   - 
   - 
   - 
