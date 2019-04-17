@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class eatFood : MonoBehaviour
 {
+    public   SnakeMovement movement;
+    public int growPerOneFood;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,10 @@ public class eatFood : MonoBehaviour
     {
         if (snake.CompareTag("snakeHead"))
         {
-            snake.GetComponent<Transform>().parent.GetComponent<SnakeMovement>().addBodyPart();
+            for (int i = 0; i < growPerOneFood; i++)
+            {
+                movement.addBodyPart();
+            }
             Destroy(gameObject);
         }
         

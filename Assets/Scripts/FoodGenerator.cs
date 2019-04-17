@@ -11,13 +11,19 @@ public class FoodGenerator : MonoBehaviour
     public float y = 0.39f;
     public GameObject curFood;
     public GameObject foodPrefab;
+    public SnakeMovement movement;
+    public int growPerOneFood = 3;
     private Vector3 curPos;
 
 
     // Start is called before the first frame update
     void addNewFood()
-    {     
-        curFood = Instantiate(foodPrefab, randomPos(),Quaternion.identity);  
+    {
+        GameObject newFood = foodPrefab;
+        newFood.GetComponent<eatFood>().movement = movement;
+        newFood.GetComponent<eatFood>().growPerOneFood = growPerOneFood;
+
+        curFood = Instantiate(newFood, randomPos(),Quaternion.identity);  
     }
 
     Vector3  randomPos() {
