@@ -21,6 +21,7 @@ public class eatFood : MonoBehaviour
     {
         if (snake.CompareTag("snakeHead"))
         {
+            movement.score++;
             for (int i = 0; i < growPerOneFood; i++)
             {
                 movement.addBodyPart();

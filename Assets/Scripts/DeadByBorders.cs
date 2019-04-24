@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class DeadByBorders : MonoBehaviour
 {
+    public SnakeMovement movement;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider snake)
     {
-        if (snake.CompareTag("snakeHead") || snake.CompareTag("snake"))
+        if (snake.CompareTag("snakeHead") )
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            movement.Dead();
         }
 
     }

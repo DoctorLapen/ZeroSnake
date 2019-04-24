@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4236884435623320063}
   - component: {fileID: 2288898090166448197}
   - component: {fileID: 5664031510860639467}
-  m_Layer: 0
+  - component: {fileID: 8397048459506296423}
+  m_Layer: 15
   m_Name: tail
   m_TagString: snake
   m_Icon: {fileID: 0}
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185078852815577565}
-  m_LocalRotation: {x: 0, y: -0.14289385, z: 0, w: 0.98973805}
+  m_LocalRotation: {x: 0, y: -0.14289667, z: 0, w: 0.98973763}
   m_LocalPosition: {x: -159.08519, y: -39.69, z: 690.6352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -16.431002, z: 0}
 --- !u!33 &4236884435623320063
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86,8 +87,20 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185078852815577565}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.58057106
+  m_Center: {x: 9.317829e-10, y: 0, z: -0.080571875}
+--- !u!114 &8397048459506296423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185078852815577565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd627e8500428a74b8f59e499c49a303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

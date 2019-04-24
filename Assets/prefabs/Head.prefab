@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2586281370891752893}
   - component: {fileID: 2490478274541685296}
   - component: {fileID: 3138450016299970584}
+  - component: {fileID: 2566801183928323677}
   - component: {fileID: 257970320392701931}
   m_Layer: 15
   m_Name: Head
@@ -92,6 +93,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2566801183928323677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3674657692497238149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8a7d7a43af39f4fa6b1f248b4ea3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &257970320392701931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -106,5 +119,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 126
+  m_CollisionDetection: 2

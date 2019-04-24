@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SnakeMovement : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class SnakeMovement : MonoBehaviour
     public float rotationSpeed = 50f;
     public int beginSize;
     public GameObject bodyPrefab;
+    public GameObject gameOverScreen;
+    public GameObject ScorePanel;
+    public Text textScore;
+    public Text finalScoreText;
+    public int  score = 0;
+    public float rotationDirection = 0;
+
     private float dis;
     private Transform curBodyPart;
     private Transform prevBodyPart;
+
     
 
     // Start is called before the first frame update
@@ -29,16 +38,17 @@ public class SnakeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textScore.text = "score:" + score.ToString();
         Move();
-        if (Input.GetKey(KeyCode.Q)) addBodyPart();
+        
         
     }
      void Move()
     {
         bodyParts[0].Translate(bodyParts[0].forward * speed* Time.deltaTime, Space.World);
    
-        if (Input.GetAxis("Horizontal") != 0) 
-            bodyParts[0].Rotate(  Vector3.up *rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
+        if (rotationDirection != 0) 
+            bodyParts[0].Rotate(  Vector3.up *rotationSpeed * Time.deltaTime * rotationDirection);
        
             for (int i = 1; i < bodyParts.Count; i++) {
                 curBodyPart = bodyParts[i];
@@ -56,8 +66,15 @@ public class SnakeMovement : MonoBehaviour
     }
     public void addBodyPart()
     {
-        Transform newPart = Instantiate(bodyPrefab,bodyParts[bodyParts.Count -1 ].position, bodyParts[bodyParts.Count - 1].rotation) .transform;
+        GameObject newBody = bodyPrefab;
+        newBody.GetComponent<DeadByTail>().movement = this;
+        Transform newPart = Instantiate(newBody, bodyParts[bodyParts.Count -1 ].position, bodyParts[bodyParts.Count - 1].rotation) .transform;
         newPart.SetParent(transform);
         bodyParts.Add(newPart);
+    }
+    public void Dead() {
+        gameOverScreen.SetActive(true);
+        finalScoreText.text = "Your score:" + score.ToString();
+
     }
 }
