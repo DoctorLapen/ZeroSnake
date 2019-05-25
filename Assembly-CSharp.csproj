@@ -61,14 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AndroidMoveController.cs" />
-    <Compile Include="Assets\Scripts\DeadByBorders.cs" />
-    <Compile Include="Assets\Scripts\DeadByTail.cs" />
-    <Compile Include="Assets\Scripts\DeadMenuScript.cs" />
-    <Compile Include="Assets\Scripts\eatFood.cs" />
-    <Compile Include="Assets\Scripts\FoodGenerator.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\pauseMenu.cs" />
-    <Compile Include="Assets\Scripts\SnakeHead.cs" />
+    <Compile Include="Assets\Scripts\CondOfDeath\DeadByBorders.cs" />
+    <Compile Include="Assets\Scripts\CondOfDeath\DeadByTail.cs" />
+    <Compile Include="Assets\Scripts\FoodScripts\eatFood.cs" />
+    <Compile Include="Assets\Scripts\FoodScripts\FoodGenerator.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\DeadMenuScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\pauseMenu.cs" />
     <Compile Include="Assets\Scripts\SnakeMovement.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

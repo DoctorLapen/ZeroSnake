@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+// скрипт таймера задержи после выхода из паузы
 public class Timer : MonoBehaviour
 {
     public bool isActive = false;
@@ -10,11 +10,12 @@ public class Timer : MonoBehaviour
     public float time = 3 * 1000f;
     public GameObject TimerPane;
     public Text TimerText;
+    // ссылка на экземпляр основного класа управления змейки в текущей игре
     public SnakeMovement movement;
     private float snakeSpeed;
     private float time_;
 
-    // Start is called before the first frame update
+    // инициализация таймера
     void Start()
     {
         time_ = time;
@@ -22,7 +23,7 @@ public class Timer : MonoBehaviour
         TimerText.text = time.ToString(); ;
     }
 
-    // Update is called once per frame
+    // основной рабочий метод таймера
     void Update()
     {
         if (isActive)
@@ -30,8 +31,7 @@ public class Timer : MonoBehaviour
             if (time > 0)
             {
                 time -= Time.deltaTime ;
-                Debug.Log(time);
-                Debug.Log(Time.deltaTime);
+               
                 TimerText.text = string.Format("{0:f0}", time);
             }
             else
@@ -41,6 +41,11 @@ public class Timer : MonoBehaviour
                 isActive = false;
             }
         }
+        /*
+         * установление времени отчета для следующего использования таймера
+         * (возможность многократного использования таймера)
+         */ 
+        
         else {
             time = time_;
         }
