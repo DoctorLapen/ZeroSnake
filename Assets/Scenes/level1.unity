@@ -1798,19 +1798,5 @@ PrefabInstance:
       propertyPath: movement
       value: 
       objectReference: {fileID: 439520820}
-    - target: {fileID: 1833959731, guid: 868e2b656e516dc4ea3abdadb9e78a31, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 205
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893706998179457178, guid: 868e2b656e516dc4ea3abdadb9e78a31,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -59
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456464812923165339, guid: 868e2b656e516dc4ea3abdadb9e78a31,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868e2b656e516dc4ea3abdadb9e78a31, type: 3}
