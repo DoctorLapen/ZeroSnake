@@ -9,13 +9,13 @@ public class pauseMenu: MonoBehaviour
     public GameObject PauseMenu;
     public GameObject ScoreMenu;
     public GameObject TimerPane;
-    // ссылка на экземпляр основного класа управления змейки в текущей игре
+    // ссылка на экземпляр основного класса управления змейки в текущей игре
     public SnakeMovement movement;
     // ссылка на скрипт текущего таймера
     public Timer timer;
 
     /*
-     * обраьатывает кнопку паузы во время игры
+     * обрабатывает кнопку паузы во время игры
      * вызывает меню паузы 
      * останавливает змейку
      */

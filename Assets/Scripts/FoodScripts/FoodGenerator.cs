@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FoodGenerator : MonoBehaviour
    
-     // скрипт генератора еды в случайном месте в прямоугольнике с вершинами(xMin,xMax,zMin,zMax)
+     // скрипт генератора, который спаунит  еду в случайном месте    
+     //  прямоугольника с вершинами(xMin,xMax,zMin,zMax)
      
 {
     public float xMin=13.1f;
@@ -21,9 +22,10 @@ public class FoodGenerator : MonoBehaviour
 
     void Start() {
         newFood = foodPrefab;
-        //передача ссылки на экземпляр основного класа управления змейки в текущей игре в обьект еды
+        //передача ссылки на экземпляр основного класса управления змейки
+        // в текущей игре в объект еды
         newFood.GetComponent<eatFood>().movement = movement;
-        //передача значения growPerOneFood в  обьект еды
+        //передача значения growPerOneFood в  объект еды
         newFood.GetComponent<eatFood>().growPerOneFood = growPerOneFood;
     }
 
@@ -32,11 +34,11 @@ public class FoodGenerator : MonoBehaviour
     {
         curFood = Instantiate(newFood, randomPos(),Quaternion.identity);  
     }
-    //метод создание вектора со случайными координатами  в прямоугольнике с вершинами(xMin,xMax,zMin,zMax)
+    //метод создания вектора со случайными координатами  в прямоугольнике с вершинами(xMin,xMax,zMin,zMax)
     Vector3 randomPos() {
         return new Vector3(Random.Range(xMin, xMax),y, Random.Range(zMin, zMax)); 
     }
-    //метод который проверяет сьедина ли текущая еда,если да то вызывает метод  addNewFood()
+    //метод ,который проверяет съедина ли текущая еда:если да ,то вызывает метод  addNewFood()
     void Update()
     {
         if (!curFood)

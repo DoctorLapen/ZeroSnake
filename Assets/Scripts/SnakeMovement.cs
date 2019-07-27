@@ -18,7 +18,7 @@ public class SnakeMovement : MonoBehaviour
     public Text finalScoreText;
     public int  score = 0;
     /*
-     * rotationDirection это направление движение змейки
+     * rotationDirection это направление движения змейки
      * поворот в лево = -1
      * поворот в право = 1
      * прямо = 0
@@ -37,7 +37,7 @@ public class SnakeMovement : MonoBehaviour
     {
         newBody = bodyPrefab;
         newBody.GetComponent<DeadByTail>().movement = this;
-        // начальная  инизализация сегментов змейки до размера равному beginSize
+        // начальная  инициализация сегментов змейки до размера равного beginSize
         for (int i = 0; i < beginSize - 2; i++)
         {
             addBodyPart();
@@ -55,7 +55,7 @@ public class SnakeMovement : MonoBehaviour
         
         
     }
-    //основной скрипт движения змейки
+    //основной метод движения змейки
      void Move()
     {
         bodyParts[0].Translate(bodyParts[0].forward * speed* Time.deltaTime, Space.World);
@@ -68,7 +68,8 @@ public class SnakeMovement : MonoBehaviour
                 prevBodyPart = bodyParts[i - 1];
                 dis = Vector3.Distance(prevBodyPart.position, curBodyPart.position);
                 Vector3 newPos = prevBodyPart.position;
-                float T = Time.deltaTime* dis / minDis * speed;
+            float T = Time.deltaTime* dis / minDis * speed;
+            
                 if (T > 0.5f) T = 0.5f;
                 curBodyPart.position = Vector3.Slerp(curBodyPart.position, prevBodyPart.position, T);
                 curBodyPart.rotation = Quaternion.Slerp(curBodyPart.rotation, prevBodyPart.rotation, T);
@@ -92,8 +93,8 @@ public class SnakeMovement : MonoBehaviour
     }
     /*
      * этот скрипт вызывается при смерти змейки
-     * здесь производятся все действия которые должны произойти после смерти змейки
-     * в данной версии это включения экрана смерти и вывод финального счета
+     * здесь производятся все действия ,которые должны произойти после смерти змейки
+     * в данной версии это включение экрана смерти и вывод финального счета
      */
     public void Dead() {
         gameOverScreen.SetActive(true);

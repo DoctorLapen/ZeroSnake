@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// скрипт таймера задержи после выхода из паузы
+// скрипт таймера задержки после выхода из паузы
 public class Timer : MonoBehaviour
 {
     public bool isActive = false;
@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public float time = 3 * 1000f;
     public GameObject TimerPane;
     public Text TimerText;
-    // ссылка на экземпляр основного класа управления змейки в текущей игре
+    // ссылка на экземпляр основного класса управления змейки в текущей игре
     public SnakeMovement movement;
     private float snakeSpeed;
     private float time_;
@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
             }
         }
         /*
-         * установление времени отчета для следующего использования таймера
+         * установление времени отсчета для следующего использования таймера
          * (возможность многократного использования таймера)
          */ 
         

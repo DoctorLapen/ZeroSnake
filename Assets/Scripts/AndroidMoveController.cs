@@ -5,7 +5,7 @@ using UnityEngine;
  * Скрипт управления движением змейки с помощью виртуальных кнопок rightRotation и leftRotation
  */
 public class AndroidMoveController : MonoBehaviour
-{   // ссылка на экземпляр основного класа управления змейки в текущей игре
+{   // ссылка на экземпляр основного класса управления змейки в текущей игре
     public SnakeMovement movement;
 
  /* 
@@ -28,7 +28,7 @@ public class AndroidMoveController : MonoBehaviour
     }
     /* 
     * метод для движения прямо
-    * срабатывает при если не удерживается виртуальная кнопка rightRotation  или  leftRotation
+    * срабатывает если не удерживается виртуальная кнопка rightRotation  или  leftRotation
     */
     public void moveStraight()
     {

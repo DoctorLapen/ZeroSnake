@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 /* 
- * скрипт который отвечает за оброботку столкновений змейки с забором
- * если есть столкновение то вызывает метод Dead  у змейки(смерть змейки)
+ * скрипт который отвечает за обработку столкновений змейки с бордером
+ * если есть столкновение: то вызывает метод Dead  у змейки
  * устанавливается на префабы бордеров
  */
 public class DeadByBorders : MonoBehaviour
